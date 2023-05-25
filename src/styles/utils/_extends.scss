@@ -1,4 +1,8 @@
-%h1 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
+%stepLine {
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  width: 2px;
+  background-color: #2B2E38;
 }

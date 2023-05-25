@@ -1,0 +1,44 @@
+.page {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 130%;
+  color: $text-color;
+
+  scroll-behavior: smooth;
+
+  &__body {
+    margin: 0;
+    box-sizing: border-box;
+    
+    @include onTablet {
+      display: grid;
+      grid-template-columns: 418px 1fr;
+    }
+  }
+
+  &__sidebar {
+    display: none;
+
+    @include onTablet {
+      display: block;
+    }
+  }
+
+  &__query {
+    padding: 0 20px;
+
+    @include onTablet {
+      padding: 0 30px;
+    }
+
+    @include onDesktop {
+      padding: 0 40px;
+    }
+
+    @include onFullHD {
+      padding: 0 104px 0 88px;
+    }
+  }
+}

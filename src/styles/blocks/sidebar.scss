@@ -1,0 +1,92 @@
+.sidebar {
+  position: relative;
+  padding-left: 88px;
+  min-height: 100vh;
+  background-color: #191B24;
+  background-image: url(../images/Vector.svg);
+  background-repeat: no-repeat;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 185px;
+    height: 150px;
+    bottom: 0;
+    right: 0;
+    background-image: url(../images/Vector2.svg);
+    background-repeat: no-repeat;
+  }
+
+  &__logo {
+    padding-top: 80px;
+    margin-bottom: 60px;
+  }
+
+  &__title {
+    margin: 0 0 40px;
+    font-weight: 700;
+    font-size: 28px;
+
+    display: flex;
+    align-items: center;
+    color: #fff;
+  }
+
+  &__step {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    margin-bottom: $step-gap;
+  }
+
+  &__image-container {
+    position: relative;
+  }
+
+  &__step-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include square($step-icon-size);
+
+    font-weight: 700;
+    font-size: 16px;
+    color: #fff;
+    background: #2B2E38;
+    border-radius: 50%;
+  }
+
+  &__step-image--complited {
+    background-image: url(../images/Circle.svg);
+
+    &::after {
+      content: '';
+      @extend %stepLine;
+      height: $step-gap;
+    }
+  }
+
+  &__step-image--active {
+    background: #424BD1;
+    box-shadow: 0px 4px 14px rgba(14, 14, 15, 0.3);
+    border-radius: 50%;
+
+    &::after {
+      content: '';
+      @extend %stepLine;
+      height: calc(#{$step-gap} / 2);
+    }
+  }
+
+  &__step-text {
+    font-weight: 700;
+    color: #99A2AF;
+
+    &--active {
+      color: #fff;
+    }
+  }
+}

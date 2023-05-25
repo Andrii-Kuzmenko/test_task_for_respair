@@ -1,0 +1,55 @@
+.query {
+  &__title {
+    margin: 0 0 12px;
+    font-weight: 700;
+    font-size: 32px;
+  }
+
+  &__title-caption {
+    margin: 0 0 40px;
+    color: #546072;
+  }
+
+  &__question {
+    max-width: 820px;
+    margin: 0 0 8px;
+
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  &__question-element {
+    color: #EA4335;
+  }
+
+  &__question-caption {
+    margin: 0 0 24px;
+    color: #3F4B57;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+
+    @include onFullHD {
+      flex-direction: row;
+      gap: 64px;
+    }
+  }
+
+  &__radio {
+    @include hover(transform, scale(1.1))
+  }
+
+  &__notation {
+    margin-bottom: 176px;
+  }
+
+  &__button-container {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 40px;
+  }
+}

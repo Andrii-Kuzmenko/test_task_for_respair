@@ -1,0 +1,32 @@
+.notation {
+  display: grid;
+  grid-template-columns: 23px 1fr;
+  gap: 8px;
+  padding: 16px 24px 20px 20px;
+
+  background: rgba(66, 75, 209, 0.1);
+  border-radius: 16px;
+
+  &__icon {
+    @include square(23px);
+    background-image: url(../images/exclamation.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__title {
+    margin: 0 0 12px;
+    font-weight: 700;
+    color: $blue-color;
+  }
+
+  &__text {
+    margin: 0 0 8px;
+    font-size: 16px;
+    line-height: 1.5;
+
+    &--last {
+      margin-bottom: 0;
+    }
+  }
+}
